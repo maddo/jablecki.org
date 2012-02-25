@@ -1,0 +1,21 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+<h2>Current Items:</h2>
+<ul>
+    {% for item in items.current %}
+    <li>
+        {{ item | raw }}
+    </li>
+    {% endfor %}
+</ul>
+<h2>Old Items:</h2>
+<ul>
+    {% for item in items.old %}
+    <li>
+        {{ item | raw }}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock content %}
+

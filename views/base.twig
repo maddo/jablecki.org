@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=620">
+    <title>{% block title %}Michael Jablecki{% endblock title %}</title>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <style type="text/css">
+        a:link { color: black; text-decoration: none; font-weight: bold; }
+        a:visited { color: black; text-decoration: none; font-weight: bold; }
+        a:hover { color: blue; text-decoration: underline; }
+        h1, h2, h3, h4 {
+        }
+        h1 {
+            font-size: 49px;
+            line-height: 65px;
+        }
+
+        body {
+            font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 25px;
+            margin:50px 0px; 
+            padding:0px;
+        }
+        .heading {
+            text-align: center;
+        }
+        .content {
+            width: 600px;
+            margin: 0px auto;
+        }
+        .timespan {
+            font-style: italic;
+        }
+    </style>
+
+    <section id="wrapper">
+        <div class="heading">
+            <h1>{% block heading %}
+            This is Michael Adam Jablecki's Homepage
+            {% endblock heading %}</h1>
+        </div>
+        <div class="content">
+            {% block content %}
+            <article></article>
+            {% endblock content %}
+        </div>
+        <div class="footer">
+            {% block footer %}
+            {% endblock footer %}
+        </div>
+    </section>
+<!--<script>-->
+<!--try {-->
+<!--var pageTracker = _gat._getTracker("");-->
+<!--pageTracker._trackPageview();-->
+<!--} catch(err) {}</script>-->
+</body>
+</html>

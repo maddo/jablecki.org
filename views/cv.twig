@@ -1,0 +1,105 @@
+{% extends 'base.twig' %}
+
+{% block title %}Michael Jablecki - CV/Resume{% endblock title %}
+
+{% block heading %}{% endblock heading %}
+
+{% block content %}
+    <style type="text/css">
+        .timespan {
+            font-style: italic;
+        }
+    </style>
+
+    <article>
+        <header>
+            <h1><a href="{{ path('index') }}">Michael Jablecki</a></h1>
+            <h3>Full Stack Web Developer</h3>
+        </header>
+        <section>
+            <div>mjablecki@gmail.com</div>
+            <div>AR +54 (9 11) 5113 5460</div>
+            <div>US +1 (401) 354-2841</div>
+            <div><a id="built" href="http://twitter.com/jabowocky">@jabowocky</a></div>
+            <div><a href="https://github.com/maddo">maddo@github</a></div>
+        </section>
+        <section>
+            <h2>Summary</h2>
+            I love working with the open web stack. My passion is finding neat ways to solve the every-day problems of web applications. My meta passion is finding useful web-apps to make.
+        </section>
+        <section>
+            <h2>Specialties</h2>
+            Web App Development with PHP and the common open stack.
+        </section>
+        <section>
+            <h2>Experience</h2>
+
+            <h3>Core developer at F5Interactivo<span ></span></h3>
+            <div class="timespan">December 2011 - Present</div>
+            <div class="link"><a href="http://www.f5interactivo.com/">f5interactivo.com</a></div>
+            <div>Active role in a two person developement team responsible for developing an ecommerce project. Helped project managers bring clients requests down to definable steps and searched for the correct technologies to implement them. The project was developed with Symfony 2 using Doctrine 2 over mysql with SOLR, jquery, Twitter Bootstrap and many Symfony 2 bundles which are currently under development.</div>
+
+            <h3>Front End Web Developer at OLX</h3>
+            <div class="timespan">December 2006 - November 2011 (5 years)</div>
+            <div class="link"><a href="http://www.olx.com/">olx.com</a></div>
+            <div>New feature implementation, from database to UI (SQL, PHP, HTML+CSS, Javascript). Work closely with atomically organized teams to rapidly develop and deploy. Manipulated large datasets across diverse environments with XML, SQL, CSV using PHP and Python.</div>
+        </section>
+        <section>
+            <h2>Personal Projects</h2>
+
+            <h3>GiftGroup</h3>
+
+            <div class="timespan">January 2011 - Present</div>
+            <div class="link"><a href="http://gift.jablecki.org/">gift.jablecki.org</a></div>
+            <div>Hobby project to help organize group gifting! I got tired of the mass of emails sent around birthday times of friends. Under active development.</div>
+
+            <h3>CodeNotion</h3>
+            <div class="timespan">May 2011 - November 2011</div>
+            <div class="link"><a href="http://www.codenotion.com/">codenotion.com</a></div>
+            <div>CodeNotion was a group endeavor with professional friends to create a freelance company. A grand experience which saw the completion of a couple of fun projects. </div>
+            <div>Completed project - <a href="http://www.bookofcooks.com/">bookofcooks.com</a></div>
+
+            <h3>BragProof</h3>
+            <div class="timespan">June 2010  - June 2011</div>
+            <div class="link"><a href="http://www.bragproof.com/">bragproof.com</a></div>
+            <div>Inspired by a discourse about Google App Engine at the 2009 Google Dev Fest in Argentina, this project was born as a test of their platform and quickly found a place in my heart and a modest user group.</div>
+
+        </section>
+        <section>
+            <h2>Skills &amp; Expertise</h2>
+            <ul>
+                <li>PHP 5</li>
+                <li>Python</li>
+                <li>MySQL</li>
+                <li>Google App Engine w/ Python</li>
+                <li>Git &amp; SVN</li>
+                <li>Symfony 2 &amp; Doctrine 2</li>
+                <li>LESS</li>
+                <li>Shell Scripting</li>
+                <li>Javascript/jQuery</li>
+                <li>OS's
+                    <ul>
+                        <li>Linux</li>
+                        <li>Mac OS X</li>
+                        <li>Windows</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Education</h2>
+            <h3>Johnson and Wales University</h3>
+            <span>Information Technology, 2003 - 2004</span>
+            <h3>Bridgewater State College</h3>
+            <span>Computer Science, 2001 - 2003</span>
+        </section>
+        <section>
+            <h2>Interests</h2>
+            new technology, digital photography, mobile gaming, retro gaming, cloud based apps, free online education, google app engine, 10 minute cooking, playing guitar, playing keyboard, home digital recording, reading novels, watching movies, discovering new music
+        </section>
+
+    </article>
+{% endblock content %}
+
+{% block footer %}{% endblock footer %}
+
