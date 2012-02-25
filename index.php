@@ -28,17 +28,18 @@ $app->register(new Silex\Provider\SymfonyBridgesServiceProvider(), array(
 $items = array(
     'current' => array(
         'Consolidated <a href="http://blog.jablecki.org">Blog</a>.',
-        'Buenos Aires <a href="http://jablecki.org/bike.php">Social Bike Shop Map</a>.',
+        // 'Buenos Aires <a href="http://jablecki.org/bike.php">Social Bike Shop Map</a>.',
         'Still being amazed by <a href="http://www.linode.com/?r=8272b3593b0ab7ca3e5b4e4caae33bf6042cd12c">linode</a>.',
-        'My favorite place to catch up on <a href="http://news.ycombinator.com/">net junk</a>.',
-        'Fascinated, for no good reason, once again with <a href="http://twitter.com/jabowocky">twitter</a>.',
+        'My favorite place to catch up on tech <a href="http://news.ycombinator.com/">Hacker News</a>.',
+        'Find me on twitter <a href="http://twitter.com/jabowocky">@jabowocky</a>.',
+        'New Hobby project: <a href="http://gift.jablecki.org/">Group Gift</a>.',
         'My <a href="' . '/cv' . '">CV/Resume</a>'
     ),
     'old' => array(
         'freelance launched with my genius friends <a href="http://codenotion.com">codeNotion</a>',
-        'Checkout the now ended <a href="http://olxbeardcontest.blogspot.com">beard contest</a> at my <a href="http://www.olx.com">work</a>.',
+        'The long past <a href="http://olxbeardcontest.blogspot.com">beard contest</a> at my <a href="http://www.olx.com">previous job</a>.',
         'A quick net-art page <a href="http://jablecki.org/options.php">Options</a>.',
-        'My current project, <a href="http://bragproof.com/">BragProof</a>, is proving enjoyable.  It has it\'s own <a href="http://twitter.com/bragproofcom">twitter</a>.',
+        'A fun past project, <a href="http://bragproof.com/">BragProof</a>, has suspended development.',
     ),            
 );
 
