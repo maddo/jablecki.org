@@ -38,7 +38,7 @@ $items = array(
     'old' => array(
         'freelance launched with my genius friends <a href="http://codenotion.com">codeNotion</a>',
         'The long past <a href="http://olxbeardcontest.blogspot.com">beard contest</a> at my <a href="http://www.olx.com">previous job</a>.',
-        'A quick net-art page <a href="http://jablecki.org/options.php">Options</a>.',
+        // 'A quick net-art page <a href="http://jablecki.org/options.php">Options</a>.',
         'A fun past project, <a href="http://bragproof.com/">BragProof</a>, has suspended development.',
     ),            
 );
