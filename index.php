@@ -70,6 +70,10 @@ $chords = array(
     "http://tabs.ultimate-guitar.com/n/neutral_milk_hotel/two-headed_boy_crd.htm" => "Neutral Milk Hotel - Two Headed Boy",
     "http://tabs.ultimate-guitar.com/n/neutral_milk_hotel/two-headed_boy_part_two_crd.htm" => "Neutral Milk Hotel - Two Headed Boy pt 2",
     "http://tabs.ultimate-guitar.com/j/johnny_flynn/the_wrote_and_the_writ_ver2_crd.htm" => "Johnny Flynn - The Wrote and the Writ",
+    "http://tabs.ultimate-guitar.com/t/the_avett_brothers/paranoia_in_bb_major_ver3_crd.htm" => "Avett Brothers - Paranoia In Bb Major",
+    "http://tabs.ultimate-guitar.com/t/the_avett_brothers/die_die_die_ver3_crd.htm" => "Avett Brothers - Die Die Die",
+    "http://tabs.ultimate-guitar.com/t/the_avett_brothers/incomplete_and_insecure_crd.htm" => "Avett Brothers - Incomplete And Insecure",
+    "http://tabs.ultimate-guitar.com/t/the_avett_brothers/ill_with_want_crd.htm" => "Avett Brothes - Ill With Want",
 );
 
 $app->get('/chords', function () use ($app, $chords) {
