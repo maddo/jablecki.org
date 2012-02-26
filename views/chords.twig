@@ -1,0 +1,13 @@
+{% extends 'base.twig' %}
+
+{% block title %}Michael Jablecki - Chords{% endblock title %}
+
+{% block heading %}Some of my favorite tabs/chords{% endblock heading %}
+
+{% block content %}
+<ul>
+    {% for link, title in chords %}
+    <li><a href="{{ link }}">{{ title | raw }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock content %}
