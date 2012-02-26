@@ -34,10 +34,10 @@ $items = array(
         'My favorite place to catch up on tech <a href="http://news.ycombinator.com/">Hacker News</a>.',
         'Find me on twitter <a href="http://twitter.com/jabowocky">@jabowocky</a>.',
         'New Hobby project: <a href="http://gift.jablecki.org/">Group Gift</a>.',
-        'My <a href="' . '/cv' . '">CV/Resume</a>'
+        'My <a href="' . '/cv' . '">CV/Resume</a>.'
     ),
     'old' => array(
-        'freelance launched with my genius friends <a href="http://codenotion.com">codeNotion</a>',
+        'Freelance launched (and disbanded) with my genius friends <a href="http://codenotion.com">codeNotion</a>.',
         'The long past <a href="http://olxbeardcontest.blogspot.com">beard contest</a> at my <a href="http://www.olx.com">previous job</a>.',
         // 'A quick net-art page <a href="http://jablecki.org/options.php">Options</a>.',
         'A fun past project, <a href="http://bragproof.com/">BragProof</a>, has suspended development.',
