@@ -48,6 +48,38 @@ $app->get('/cv', function () use ($app) {
 })
 ->bind('cv');
 
+$chords = array(
+    "http://tabs.ultimate-guitar.com/m/mountain_goats/heretic_pride_tab.htm" => "Mountain Goats - Heretic Pride",
+    "http://tabs.ultimate-guitar.com/n/no_use_for_a_name/on_the_outside_crd.htm" => "No Use For A Name - On the Outside",
+    "http://tabs.ultimate-guitar.com/c/cranberries/linger_acoustic_crd.htm" => "Cranberries - Linger",
+    "http://tabs.ultimate-guitar.com/c/cloud_cult/take_your_medicine_crd.htm" => "Cloud Cult - Take your Medecine",
+    "http://tabs.ultimate-guitar.com/c/cloud_cult/when_water_comes_to_life_crd.htm" => "Cloud Cult - Water Comes to Life",
+    "http://www.10acordes.com.ar/letra-de-la-primavera-victor-velazquez-17443" => "La Primavera de Victor Vel&aacute;zquez",
+    "http://tabs.ultimate-guitar.com/s/switchfoot/24_ver3_crd.htm" => "Switchfoot - 24",
+    "http://tabs.ultimate-guitar.com/n/neutral_milk_hotel/april_8th_ver3_tab.htm" => "Neutral Milk Hotel - April 8th",
+    "http://tabs.ultimate-guitar.com/m/mumford_and_sons/awake_my_soul_crd.htm" => "Mumford &amp; Sons - Awaky My Soul",
+    "http://tabs.ultimate-guitar.com/j/jeff_buckley/hallelujah_ver2_crd.htm" => "Jeff Buckley - Hallelujah",
+    "http://tabs.ultimate-guitar.com/t/the_avett_brothers/head_full_of_doubt_road_full_of_promise_crd.htm" => "Avett Brothers - Head Full Of Doubt",
+    "http://tabs.ultimate-guitar.com/t/the_avett_brothers/i_and_love_and_you_ver3_crd.htm" => "Avett Brothers - I and Love and You",
+    "http://tabs.ultimate-guitar.com/n/neutral_milk_hotel/oh_comely_crd.htm" => "Neutral Milk Hotel - Oh Comely",
+    "http://tabs.ultimate-guitar.com/j/john_frusciante/past_recedes_crd.htm" => "John Frusciante - Past Recedes",
+    "http://tabs.ultimate-guitar.com/j/jonathan_coulton/re_your_brains_crd.htm" => "Jonathan Coulton - Re Your Brains",
+    "http://tabs.ultimate-guitar.com/m/mumford_and_sons/white_blank_page_crd.htm" => "Mumford &amp; Sons - White Blank Page",
+    "http://tabs.ultimate-guitar.com/t/two_gallants/waves_of_grain_crd.htm" => "Two Gallants - Waves of Grain",
+    "http://tabs.ultimate-guitar.com/n/neutral_milk_hotel/two-headed_boy_crd.htm" => "Neutral Milk Hotel - Two Headed Boy",
+    "http://tabs.ultimate-guitar.com/n/neutral_milk_hotel/two-headed_boy_part_two_crd.htm" => "Neutral Milk Hotel - Two Headed Boy pt 2",
+    "http://tabs.ultimate-guitar.com/j/johnny_flynn/the_wrote_and_the_writ_ver2_crd.htm" => "Johnny Flynn - The Wrote and the Writ",
+);
+
+$app->get('/chords', function () use ($app, $chords) {
+    asort($chords);
+    return $app['twig']->render('chords.twig', array(
+        'chords' => $chords,
+    ));
+})
+->bind('chords');
+
+
 $app->get('/', function () use ($app, $items) {
     return $app['twig']->render('index.twig', array(
         'items' => $items,
