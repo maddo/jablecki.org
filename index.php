@@ -28,6 +28,7 @@ $app->register(new Silex\Provider\SymfonyBridgesServiceProvider(), array(
 $items = array(
     'current' => array(
         'Consolidated <a href="http://blog.jablecki.org">Blog</a>.',
+        'Some of my favorite <a href="' . '/chords' . '">chords/tabs</a> to play guitar.',
         // 'Buenos Aires <a href="http://jablecki.org/bike.php">Social Bike Shop Map</a>.',
         'Still being amazed by <a href="http://www.linode.com/?r=8272b3593b0ab7ca3e5b4e4caae33bf6042cd12c">linode</a>.',
         'My favorite place to catch up on tech <a href="http://news.ycombinator.com/">Hacker News</a>.',

@@ -7,6 +7,9 @@
     <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body>
+    <div class="nav">
+        {% block nav %}<a href="{{ path('index') }}">home</a>{% endblock nav %}
+    </div>
     <style type="text/css">
         a:link { color: black; text-decoration: none; font-weight: bold; }
         a:visited { color: black; text-decoration: none; font-weight: bold; }
@@ -22,7 +25,7 @@
             font-family: 'PT Sans', Helvetica, Arial, sans-serif;
             font-size: 16px;
             line-height: 25px;
-            margin:50px 0px; 
+            /*margin:50px 0px; */
             padding:0px;
         }
         .heading {
@@ -38,6 +41,7 @@
     </style>
 
     <section id="wrapper">
+
         <div class="heading">
             <h1>{% block heading %}
             This is Michael Adam Jablecki's Homepage
