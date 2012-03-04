@@ -73,7 +73,9 @@ $chords = array(
     "http://tabs.ultimate-guitar.com/t/the_avett_brothers/paranoia_in_bb_major_ver3_crd.htm" => "Avett Brothers - Paranoia In Bb Major",
     "http://tabs.ultimate-guitar.com/t/the_avett_brothers/die_die_die_ver3_crd.htm" => "Avett Brothers - Die Die Die",
     "http://tabs.ultimate-guitar.com/t/the_avett_brothers/incomplete_and_insecure_crd.htm" => "Avett Brothers - Incomplete And Insecure",
-    "http://tabs.ultimate-guitar.com/t/the_avett_brothers/ill_with_want_crd.htm" => "Avett Brothes - Ill With Want",
+    "http://tabs.ultimate-guitar.com/t/the_avett_brothers/ill_with_want_crd.htm" => "Avett Brothers - Ill With Want",
+    "http://tabs.ultimate-guitar.com/m/mountain_goats/no_children_ver3_crd.htm" => "Mountain Goats - No Children",
+    "http://tabs.ultimate-guitar.com/f/fiona_apple/not_about_love_crd.htm" => "Fiona Apple - Not About Love",
 );
 
 $app->get('/chords', function () use ($app, $chords) {
@@ -91,6 +93,18 @@ $app->get('/', function () use ($app, $items) {
     ));
 })
 ->bind('index');
+
+$app->get('/images/{file}', function ($file) use ($app) {
+    if (!file_exists(__DIR__.'/images/'.$file)) {
+        return $app->abort(404, 'The image was not found.');
+    }
+
+    $stream = function () use ($file) {
+        readfile($file);
+    };
+
+    return $app->stream($stream, 200, array('Content-Type' => 'image/png'));
+});
 
 if ($app['debug'] === false) {
     $app->error(function (\Exception $e, $code) {
