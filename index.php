@@ -76,6 +76,8 @@ $chords = array(
     "http://tabs.ultimate-guitar.com/t/the_avett_brothers/ill_with_want_crd.htm" => "Avett Brothers - Ill With Want",
     "http://tabs.ultimate-guitar.com/m/mountain_goats/no_children_ver3_crd.htm" => "Mountain Goats - No Children",
     "http://tabs.ultimate-guitar.com/f/fiona_apple/not_about_love_crd.htm" => "Fiona Apple - Not About Love",
+    "http://www.gotaukulele.com/2011/06/sleeping-by-myself-eddie-vedder-ukulele.html" => "Eddie Vedder - Sleeping By Myself",
+    "http://www.ukulele-tabs.com/uke-songs/eddie-vedder/sleeping-by-myself-uke-tab-19853.html" => "Eddie Vedder - Sleeping By Myself v2",
 );
 
 $app->get('/chords', function () use ($app, $chords) {
