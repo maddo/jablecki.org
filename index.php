@@ -97,6 +97,12 @@ $app->get('/', function () use ($app, $items) {
 })
 ->bind('index');
 
+$app->get('/bike', function () use ($app) {
+    return $app['twig']->render('bike.twig', array(
+    ));
+})
+->bind('bike');
+
 $app->get('/images/{file}', function ($file) use ($app) {
     if (!file_exists(__DIR__.'/images/'.$file)) {
         return $app->abort(404, 'The image was not found.');
