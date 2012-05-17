@@ -1,12 +1,10 @@
-<html>
-<head>
-<title>Mike Jablecki's Home Page: Buenos Aires Bike Shops/Service</title>
-</head>
-<body>
-<?php include "header.php"; ?>
-<h1>Buenos Aires Bike Shops/Service</h1>
-<div>
-<p>Crowd edited Google map of bike shops (sales, service & or rental).  Feel free to join in and add the one you use</p>
-<div>
-<iframe width="800" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.es/maps/ms?ie=UTF8&amp;hl=es&amp;msa=0&amp;msid=202174275952399355424.00046ad749516b48879d5&amp;ll=-34.594781,-58.511124&amp;spn=0.337448,0.54863&amp;z=11&amp;output=embed"></iframe><br /><small>Ver <a href="http://maps.google.es/maps/ms?ie=UTF8&amp;hl=es&amp;msa=0&amp;msid=202174275952399355424.00046ad749516b48879d5&amp;ll=-34.594781,-58.511124&amp;spn=0.337448,0.54863&amp;z=11&amp;source=embed" style="color:#0000FF;text-align:left">Bicicleterias</a> en un mapa m&aacute;s grande</small>
-</div></div></body></html>
+{% extends 'base.twig' %}
+
+{% block title %}Buenos Aires Bike Shops/Service{% endblock title %}
+
+{% block heading %}Buenos Aires Bike Shops/Service{% endblock heading %}
+
+{% block content %}
+    <p>Crowd edited Google map of bike shops (sales, service & or rental).  Feel free to join in and add the one you use</p>
+    <iframe width="600" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.es/maps/ms?ie=UTF8&amp;hl=es&amp;msa=0&amp;msid=202174275952399355424.00046ad749516b48879d5&amp;ll=-34.594781,-58.511124&amp;spn=0.337448,0.54863&amp;z=11&amp;output=embed"></iframe><br /><small>Ver <a href="http://maps.google.es/maps/ms?ie=UTF8&amp;hl=es&amp;msa=0&amp;msid=202174275952399355424.00046ad749516b48879d5&amp;ll=-34.594781,-58.511124&amp;spn=0.337448,0.54863&amp;z=11&amp;source=embed" style="color:#0000FF;text-align:left">Bicicleterias</a> en un mapa m&aacute;s grande</small>
+{% endblock content %}
