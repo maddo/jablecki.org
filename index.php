@@ -34,7 +34,8 @@ $items = array(
         'My favorite place to catch up on tech <a href="http://news.ycombinator.com/">Hacker News</a>.',
         'Find me on twitter <a href="http://twitter.com/jabowocky">@jabowocky</a>.',
         'New Hobby project: <a href="http://gift.jablecki.org/">Group Gift</a>.',
-        'My <a href="' . '/cv' . '">CV/Resume</a>.'
+        'My <a href="' . '/cv' . '">CV/Resume</a>.',
+        '<a href="' . '/pug' . '">Pug</a> for Gaby.'
     ),
     'old' => array(
         'Freelance launched (and disbanded) with my genius friends <a href="http://codenotion.com">codeNotion</a>.',
@@ -81,6 +82,20 @@ $chords = array(
     "http://www.ukulele-tabs.com/uke-songs/eddie-vedder/sleeping-by-myself-uke-tab-19853.html" => "Eddie Vedder - (Ukulele) Sleeping By Myself v2",
 );
 
+function getPugPic()
+{
+    $json_url = 'http://pugme.herokuapp.com/random';
+    $ch = curl_init( $json_url );
+    $options = array(
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_HTTPHEADER => array('Content-type: application/json') ,
+    );
+    curl_setopt_array( $ch, $options );
+    $result =  curl_exec($ch); // Getting jSON result string
+    $pugpic = json_decode($result);
+    return $pugpic->pug;
+}
+
 $app->get('/chords', function () use ($app, $chords) {
     asort($chords);
     return $app['twig']->render('chords.twig', array(
@@ -89,6 +104,13 @@ $app->get('/chords', function () use ($app, $chords) {
 })
 ->bind('chords');
 
+$app->get('/pug', function () use ($app) {
+    $pugpic = getPugPic();
+    return $app['twig']->render('pug.twig', array(
+        'pugpic' => $pugpic,
+    ));
+})
+->bind('chords');
 
 $app->get('/', function () use ($app, $items) {
     return $app['twig']->render('index.twig', array(
