@@ -3,7 +3,18 @@
 {% block nav %}{% endblock nav %}
 
 {% block content %}
-<h2>For Gaby:</h2>
-<img src="{{ pugpic }}" />
+<style>
+    .pugpic img {
+        border: 3px black solid;
+        box-shadow: 10px 10px 5px #888;
+    }
+    div.pugpic {
+        text-align: center;
+    }
+</style>
+<div class="pugpic">
+    <h2>For Gaby:</h2>
+    <img src="{{ pugpic }}" />
+</div>
 {% endblock content %}
 
