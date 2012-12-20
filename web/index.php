@@ -1,48 +1,39 @@
 <?php
 
-require_once __DIR__.'/silex.phar'; 
+require_once __DIR__.'/../vendor/autoload.php';
 
 use Symfony\Component\HttpFoundation\Response;
 
-$app = new Silex\Application(); 
+$app = new Silex\Application();
 
 if ($_SERVER["HTTP_HOST"] == 'jablecki.loc') {
     $app['debug'] = true;
 }
+$app['debug'] = true;
 
 $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
-    'twig.path'       => __DIR__.'/views',
-    'twig.class_path' => __DIR__.'/vendor/twig/lib',
+    'twig.path' => __DIR__.'/views',
 ));
-$app->register(new Silex\Provider\SymfonyBridgesServiceProvider(), array(
-    'symfony_bridges.class_path'  => __DIR__.'/vendor/symfony/src',
-));
-
-// $app->get('/hello/{name}', function ($name) use ($app) {
-//     return $app['twig']->render('hello.twig', array(
-//         'name' => $name,
-//     ));
-// });
 
 $items = array(
     'current' => array(
         'Consolidated <a href="http://blog.jablecki.org">Blog</a>.',
         'Some of my favorite <a href="' . '/chords' . '">chords/tabs</a> to play guitar.',
         'Buenos Aires <a href="/bike">Social Bike Shop Map</a>.',
-        'Still being amazed by <a href="http://www.linode.com/?r=8272b3593b0ab7ca3e5b4e4caae33bf6042cd12c">linode</a>.',
+        '<del>Still being amazed by <a href="http://www.linode.com/?r=8272b3593b0ab7ca3e5b4e4caae33bf6042cd12c">linode</a>.</del> Linode is still amazing, but I\'ve switched to <a href="https://clientarea.ramnode.com/aff.php?aff=128">Ramnode</a>. Good prices, lots of ram',
         'My favorite place to catch up on tech <a href="http://news.ycombinator.com/">Hacker News</a>.',
         'Find me on twitter <a href="http://twitter.com/jabowocky">@jabowocky</a>.',
-        'New Hobby project: <a href="http://gift.jablecki.org/">Group Gift</a>.',
         'My <a href="' . '/cv' . '">CV/Resume</a>.',
-        '<a href="' . '/pug' . '">Pug</a> for Gaby.'
+        '<a href="' . '/pug' . '">Pugs</a> for Gaby.'
     ),
     'old' => array(
+        'Group Gift was laid waste - casualty to a sloppy Symfony upgrade. To be revived! (Ruby?)',
         'Freelance launched (and disbanded) with my genius friends <a href="http://codenotion.com">codeNotion</a>.',
-        'The long past <a href="http://olxbeardcontest.blogspot.com">beard contest</a> at my <a href="http://www.olx.com">previous job</a>.',
+        'The long past <a href="http://olxbeardcontest.blogspot.com">beard contest</a> at one of my <a href="http://www.olx.com">previous jobs</a>.',
         // 'A quick net-art page <a href="http://jablecki.org/options.php">Options</a>.',
-        'A fun past project, <a href="http://bragproof.com/">BragProof</a>, has suspended development.',
-    ),            
+        'A fun past project, <a href="http://bragproof.com/">BragProof</a>, sitting quietly with ~30 users per day. Probably bots.',
+    ),
 );
 
 $app->get('/cv', function () use ($app) {
@@ -110,7 +101,7 @@ $app->get('/pug', function () use ($app) {
         'pugpic' => $pugpic,
     ));
 })
-->bind('chords');
+->bind('pug');
 
 $app->get('/', function () use ($app, $items) {
     return $app['twig']->render('index.twig', array(
@@ -151,4 +142,4 @@ if ($app['debug'] === false) {
     });
 }
 
-$app->run(); 
+$app->run();
