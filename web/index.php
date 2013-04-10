@@ -71,6 +71,7 @@ $chords = array(
     "http://tabs.ultimate-guitar.com/f/fiona_apple/not_about_love_crd.htm" => "Fiona Apple - Not About Love",
     "http://www.gotaukulele.com/2011/06/sleeping-by-myself-eddie-vedder-ukulele.html" => "Eddie Vedder - (Ukulele) Sleeping By Myself",
     "http://www.ukulele-tabs.com/uke-songs/eddie-vedder/sleeping-by-myself-uke-tab-19853.html" => "Eddie Vedder - (Ukulele) Sleeping By Myself v2",
+    "http://tabs.ultimate-guitar.com/w/weezer/my_name_is_jonas_tab.htm" => "Weezer - My Name is Jonas",
 );
 
 function getPugPic()
