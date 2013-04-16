@@ -18,7 +18,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 
 $items = array(
     'current' => array(
-        'Rediculous <a href="https://docs.google.com/spreadsheet/pub?key=0AjuNCAcSURT6dFJyc0t5N1F0WWlMTWF1OVY2MlJZMXc&single=true&gid=0&output=html">Starbucks Coffee of the Day + Syrup Chart</a>',
+        'Ridiculous <a href="https://docs.google.com/spreadsheet/pub?key=0AjuNCAcSURT6dFJyc0t5N1F0WWlMTWF1OVY2MlJZMXc&single=true&gid=0&output=html">Starbucks Coffee of the Day + Syrup Chart</a>',
         'Consolidated <a href="http://blog.jablecki.org">Blog</a>.',
         'Some of my favorite <a href="' . '/chords' . '">chords/tabs</a> to play guitar.',
         'Buenos Aires <a href="/bike">Social Bike Shop Map</a>.',
